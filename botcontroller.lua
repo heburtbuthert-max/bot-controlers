@@ -8,16 +8,6 @@
  2) In owner’s chat, use your commands: ;status ;index ;follow <plr> ;orbit <plr> <r> <spd> ;circle 10 ;align <plr> ;goto <plr> ;help ...
 ]]--
 
--- === Optional getgenv() config (keeps your exact style). You can override these before running. ===
-getgenv().Use_Displayname = (getgenv().Use_Displayname ~= nil) and getgenv().Use_Displayname or true
-getgenv().bots = getgenv().bots or { "Player1", "Player2", "Player3", "Player4" }
-getgenv().owner = getgenv().owner or "Player1"
-getgenv().nbbot = getgenv().nbbot or #getgenv().bots
-getgenv().prefix = getgenv().prefix or ";"
-getgenv().botrender = (getgenv().botrender ~= nil) and getgenv().botrender or false
-getgenv().printcmd = (getgenv().printcmd ~= nil) and getgenv().printcmd or true
-getgenv().version = getgenv().version or "studio-harness"
-
 -- === Services ===
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
@@ -843,3 +833,4 @@ Players.PlayerAdded:Connect(function(plr)
     connectChatListener(plr)
   end
 end)
+
